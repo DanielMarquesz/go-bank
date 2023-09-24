@@ -46,7 +46,8 @@ func (s *PostgresStore) createAccountTable() error {
 		last_name varchar(50),
 		number serial,
 		balance serial,
-		created_at timestamp
+		created_at timestamp,
+		updated_at timestamp
 	);`
 
 	_, err := s.db.Exec(query)
